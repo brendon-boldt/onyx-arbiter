@@ -5,7 +5,9 @@ class Section {
 private:
 
 public:
+    Section(unsigned int);
     vector<unsigned int> Roster;
+    unsigned int period;
 };
 
 class Class {
@@ -16,9 +18,10 @@ private:
 
 public:
     Class(unsigned int);
-    //int sizeLimit;
-    unsigned int period;
+    //unsigned int period;
     vector<unsigned int> Roster; // List of student IDs
+    vector<Section> Sections;
+    void createSection(unsigned int);
 
     void printRoster(void) const;
     unsigned int getID(void) const;

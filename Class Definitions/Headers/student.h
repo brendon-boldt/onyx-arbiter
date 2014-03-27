@@ -11,6 +11,7 @@ private:
 public:
     Student(unsigned int);
     vector<unsigned int> Courses;
+    vector<pair<unsigned int, unsigned int>> Schedule;
 
     unsigned int getID(void) const;
 };

@@ -1,4 +1,4 @@
-#include "includes.h"
+#include "Headers/includes.h"
 
 Group readGroupFromFile(const string & filename) {
     ifstream reader(filename,ios_base::in);
@@ -9,7 +9,7 @@ Group readGroupFromFile(const string & filename) {
     while(!reader.eof()) {
         buf = readLine(reader);
         if(reader.eof() || buf.size() == 0) break;
-        Res.Students.push_back(buf[0]);
+        Res.createStudent(buf[0]);
         i++;
         for(int j = 1; j < buf.size(); j++) {
             Res.Students[i].Courses.push_back(buf[j]);

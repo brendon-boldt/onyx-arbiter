@@ -21,7 +21,7 @@
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Compiler>
-					<Add option="-O2" />
+					<Add option="-O3" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -33,17 +33,17 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="auxillary.h" />
-		<Unit filename="class.cpp" />
-		<Unit filename="class.h" />
-		<Unit filename="file.cpp" />
-		<Unit filename="file.h" />
-		<Unit filename="group.cpp" />
-		<Unit filename="group.h" />
-		<Unit filename="includes.h" />
+		<Unit filename="Class Definitions/Headers/auxillary.h" />
+		<Unit filename="Class Definitions/Headers/class.h" />
+		<Unit filename="Class Definitions/Headers/file.h" />
+		<Unit filename="Class Definitions/Headers/group.h" />
+		<Unit filename="Class Definitions/Headers/includes.h" />
+		<Unit filename="Class Definitions/Headers/student.h" />
+		<Unit filename="Class Definitions/class.cpp" />
+		<Unit filename="Class Definitions/file.cpp" />
+		<Unit filename="Class Definitions/group.cpp" />
+		<Unit filename="Class Definitions/student.cpp" />
 		<Unit filename="main.cpp" />
-		<Unit filename="student.cpp" />
-		<Unit filename="student.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />
