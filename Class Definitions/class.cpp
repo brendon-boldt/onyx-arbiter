@@ -16,24 +16,16 @@ void Class::createSection(unsigned int x) { // Eventually, this will have to gua
         this->Sections.push_back(x);
 }
 
-/*
-/// Write a better way to assign this->ID
-Class::Class(unsigned int x) : ID(x) { // Figure out what this means
-    for(int i = 0; i < this->IDs.size(); i++)
-        assert(this->ID != this->IDs[i]);
-    this->IDs.push_back(this->ID);
-    this->period = 0;
+bool Class::sectionExists(unsigned int x) {
+    for(int i = 0; i < this->Sections.size(); i++) {
+        if(this->Sections[i].period == x)
+            return true;
+    }
+    return false;
 }
-*/
 
 bool operator== (const Class & a, const Class & b) {
     return a.getID() == b.getID();
-}
-
-void Class::printRoster(void) const {
-    for(int i = 0; i < this->Roster.size(); i++) {
-        cout << Roster[i] << " ";
-    }
 }
 
 unsigned int Class::getID(void) const {

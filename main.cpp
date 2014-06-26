@@ -1,5 +1,4 @@
 #include "Class Definitions/Headers/includes.h"
-#define LIMIT 2
 
 // Should I move this?
 mt19937 gen;
@@ -24,8 +23,6 @@ void worker(void * Arg) {
 
 
 
-
-
 int main() {
 
     chrono::steady_clock::time_point t1 = chrono::steady_clock::now();
@@ -38,7 +35,7 @@ int main() {
         Academy.createClass(i);
     }
 
-    Academy = assignClasses(Academy);
+    //Academy = assignClasses(Academy);
 
     //_beginthread(worker,0,&Academy);
 
@@ -46,10 +43,11 @@ int main() {
     //ofstream w("dump.txt",ios_base::out);
     unsigned int temp;
     Group tempGroup,minGroup;
-    unsigned int cycles = 20;
+    unsigned int cycles = 5;
     for(int i = 0; i < cycles; i++) {
-    //while(true) {
-        tempGroup = scheduleClasses(randomizeGroup(Academy));
+        //tempGroup = scheduleClasses(randomizeGroup(Academy));
+        tempGroup = scheduleClassesAlt(randomizeGroup(Academy));
+        //tempGroup = randomScheduleClasses(Academy);
         temp = getConflicts(tempGroup);
 
         /*
@@ -83,7 +81,8 @@ int main() {
 
     chrono::steady_clock::time_point t2 = chrono::steady_clock::now();
     chrono::duration<double> time_span = chrono::duration_cast<chrono::duration<double>>(t2 - t1);
-    cout << endl << "OPS :: " << (float)cycles/time_span.count() << endl;
+    cout << endl << "OPS = " << (float)cycles/time_span.count() << endl;
+
 
     for(int i = 0; i < minGroup.Classes.size(); i++) {
         for(int j = 0; j < minGroup.Classes[i].Sections.size(); j++) {

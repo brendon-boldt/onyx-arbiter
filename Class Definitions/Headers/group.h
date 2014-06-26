@@ -19,7 +19,8 @@ public:
     const Class   * getClass  (unsigned int) const;
 };
 
-Group scheduleClasses(const Group &);
-Group assignClasses  (const Group &);
-Group randomizeGroup (const Group &);
+Group scheduleClassesAlt (const Group &);
+Group scheduleClasses    (const Group &);
+Group assignClasses      (const Group &);
+Group randomizeGroup     (const Group &);
 unsigned int getConflicts(const Group &);

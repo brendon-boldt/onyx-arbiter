@@ -19,9 +19,11 @@ private:
 public:
     Class(unsigned int);
     //unsigned int period;
-    vector<unsigned int> Roster; // List of student IDs
+    //vector<unsigned int> Roster; // List of student IDs
+
     vector<Section> Sections;
     void createSection(unsigned int);
+    bool sectionExists(unsigned int);
 
     void printRoster(void) const;
     unsigned int getID(void) const;

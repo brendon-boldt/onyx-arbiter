@@ -1,0 +1,13 @@
+#Build Results
+*.obj
+*.o
+Debug/
+Release/
+
+#Code::Blocks Files
+*.depend
+*.layout
+
+#Misc
+*.xlsx
+*.txt
